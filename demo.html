@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velociera</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXN6anJqbTJ2ZjRnZHkxcXprdWZuc2s4eXY3bWZwMDJ2ajJna2YyZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Piktd9AgEaOYrnZHG9/giphy.gif') no-repeat center center/cover;
+            overflow: hidden;
+        }
+        h1, h2 {
+            color: #333;
+            opacity: 1;
+            transition: opacity 2s ease-out;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1rem;
+            margin-top: 0;
+        }
+        img {
+            display: none;
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Velociera</h1>
+    <h2 id="subtitle">Indefectible</h2>
+    <img id="image" src="v-logo.png" alt="Velociera Image">
+    <script>
+        setTimeout(() => {
+            document.getElementById("title").style.opacity = "0";
+            document.getElementById("subtitle").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("title").style.display = "none";
+                document.getElementById("subtitle").style.display = "none";
+                document.getElementById("image").style.display = "block";
+            }, 2000);
+        }, 5000);
+    </script>
+</body>
+</html>
